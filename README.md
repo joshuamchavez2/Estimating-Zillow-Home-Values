@@ -10,7 +10,7 @@
 > - Document code, process (data acquistion, preparation, exploratory data analysis and statistical testing, modeling, and model evaluation), findings, and key takeaways in a Jupyter Notebook report.
 > - Create modules (wrangle.py, acquire.py, prepare.py, explore.py, evaluate.py) that make your process repeateable.
 > - A report in the form of a presentation, verbal supported by slides. The report/presentation slides should summarize your findings about the drivers of the single unit property values.
-> - Deliver a 5 minute slide deck presentation; your presentation should be appropriate for your target audience.
+> - Deliver a 5 minute [Slide deck](https://www.canva.com/design/DAEqCehG2NM/wyyWkWzU8JlmRbPyFecviw/view?utm_content=DAEqCehG2NM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) with presentation summarizing findings presentation; your presentation should be appropriate for your target audience.
 > - Answer panel questions about your code, process, findings and key takeaways, and model.
 
 #### Business Goals
@@ -31,29 +31,42 @@
 
 
 #### Data Dictionary
-    coming soon
+| Column Name                  | Renamed   | Info                                            |
+|------------------------------|-----------|-------------------------------------------------|
+| bathroomcnt                  | bathrooms | number of bathrooms                             |
+| bedroomcnt                   | bedrooms  | number of bedrooms                              |
+| calculatedfinishedsquarefeet | area      | number of square feet                           |
+| fips                         | N/A       | FIPS code (for county)                          |
+| yearbuilt                    | N/A       | The year the property was built                 |
+| taxvaluedollarcnt            | tax_value | Property's tax value in dollars                 |
+| taxamount                    | tax_amount| amount of tax on property                       |
+| tax_rate                     | N/A       | tax_rate on property                            |
+| poolsizesum                  | has_pool  | 1 for pool, 0 for no                            |
 
 #### Initial Hypotheses
 
 > - **Hypothesis 1 -**
-    coming soon
+    > - $H_o$: area and bedrooms are not linearly correlated
+    > - $H_a$: area and bedrooms are linearly correlated
+    > - Outcome: I rejected the Null Hypothesis; Area and bedrooms are linearly correlated.
 
 > - **Hypothesis 2 -** 
-    coming soon
+    > - $H_o$: area and restrooms are not linearly correlated
+    > - $H_a$: area and restrooms are linearly correlated
+    > - Outcome: I rejected the Null Hypothesis; Area and bathrooms are linearly correlated.
+    
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
 ### Executive Summary - Conclusions & Next Steps
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
 
-> - Conclusion
-    Coming soon
+> - Conclusion, my best model was a Tweedie Regressor beating my baseline RMSE by roughly $30k.  My best features to predict tax value were area, bedrooms, and bathrooms.  LA had the highest tax rate and sold the most houses during hot months.
 
-> - Take Aways
-    Coming soon
+> - Take Aways, my models residuals implied that there is another driving feature for higher tax value properties.
+    
 
-> - Recommendations
-    Coming soon
+> - I had more time, I would have liked to explore and model the many different features of the Zillow database.  I would have also liked to learn more about the domain knowledge of real estate.
 
 
 <hr style="border-top: 10px groove blueviolet; margin-top: 1px; margin-bottom: 1px"></hr>
