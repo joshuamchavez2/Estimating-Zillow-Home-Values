@@ -46,7 +46,7 @@ def second_zillow_data():
     # Create SQL query.
     sql_query = """
             
-    SELECT *
+    SELECT calculatedfinishedsquarefeet, bedroomcnt, bathroomcnt, taxvaluedollarcnt, poolcnt, yearbuilt
     FROM properties_2017
     LEFT JOIN predictions_2017
 	    on properties_2017.parcelid = predictions_2017.parcelid
@@ -60,7 +60,9 @@ def second_zillow_data():
     df = df.rename(columns = {'bedroomcnt':'bedrooms', 
                               'bathroomcnt':'bathrooms', 
                               'calculatedfinishedsquarefeet':'area',
-                              'taxvaluedollarcnt':'tax_value',})
+                              'taxvaluedollarcnt':'tax_value',
+                              'poolcnt': 'has_pool',
+                              'yearbuilt': 'year'})
     return df
 
 def acquire_zillow_first():

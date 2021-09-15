@@ -78,18 +78,18 @@
     - Grab second iteration of features
         - select all features
 
-    - Prepare the data
-        - Clean
-            - Drop or Impute nulls
-            - Change datatypes
-            - remove duplicate or unuseful features
-            - scale
-            - split
-        - Create functions that can making modeling/exploration easy.  
-            - prepare_first_exploration(), 
-            - prepare_first_modeling()
-            - prepare_second_exploration()
-            - prepare_second_modeling()
+> - Prepare the data
+    - Clean
+        - Drop or Impute nulls
+        - Change datatypes
+        - remove duplicate or unuseful features
+        - scale
+        - split
+    - Create functions that can making modeling/exploration easy.  
+        - prepare_first_exploration(), 
+        - prepare_first_modeling()
+        - prepare_second_exploration()
+        - prepare_second_modeling()
 
 > - Data Exploration
     - state original hyposesis
